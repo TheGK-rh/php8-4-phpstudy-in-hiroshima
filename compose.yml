@@ -1,0 +1,17 @@
+services:
+  php84:
+    build:
+      context: .
+      dockerfile: Dockerfile.php84
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - 8080:80
+  php83:
+    build:
+      context: .
+      dockerfile: Dockerfile.php83
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - 8081:80
